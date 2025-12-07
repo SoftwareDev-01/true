@@ -46,8 +46,7 @@ Backend (Node.js + Express)
 ↓
 Database (MongoDB Atlas — "sales" collection)
 
-markdown
-Copy code
+
 
 - Backend acts as middleware to process search, filters, sorting, and pagination.
 - Frontend interacts with backend via Axios for dynamic dashboard updates.
@@ -75,8 +74,7 @@ backend/
 ├─ .env
 └─ README.md
 
-markdown
-Copy code
+
 
 **API Endpoint:**  
 `GET /api/sales`  
@@ -95,8 +93,7 @@ Sorting + Pagination
 ↓
 Response mapped to camelCase
 
-yaml
-Copy code
+
 
 ---
 
@@ -128,15 +125,12 @@ frontend/
 ├─ package.json
 └─ README.md
 
-css
-Copy code
 
 **Data Flow:**
 UI Interaction → Component State → useSalesData Hook
 → Axios → Backend API → Response mapped → Rendered in UI
 
-yaml
-Copy code
+
 
 ---
 
@@ -195,8 +189,7 @@ npm install
 # configure .env with MongoDB URI
 npm run dev
 Setup Frontend
-bash
-Copy code
+
 cd frontend
 npm install
 npm run dev
