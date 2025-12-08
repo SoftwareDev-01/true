@@ -35,6 +35,9 @@ export function FilterDropdown({
     onChange(updated);
   };
 
+  const displayLabel =
+    selected.length > 0 ? selected.join(", ") : label;
+
   return (
     <div className="relative" ref={ref}>
       <button
@@ -42,7 +45,7 @@ export function FilterDropdown({
         onClick={() => setOpen((o) => !o)}
         className={`flex items-center gap-1 rounded-md border border-gray-300 bg-white px-2.5 py-1 text-[11px] text-gray-700 hover:bg-gray-50 ${className}`}
       >
-        <span>{label}</span>
+        <span>{displayLabel}</span>
         <ChevronDown className="h-3 w-3 text-gray-500" />
       </button>
 
@@ -62,6 +65,7 @@ export function FilterDropdown({
               <span>{opt}</span>
             </label>
           ))}
+
           {options.length === 0 && (
             <div className="px-1 py-1 text-[11px] text-gray-400">
               No options
