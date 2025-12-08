@@ -14,8 +14,7 @@ Backend (Node.js + Express)
 ↓
 Database (MongoDB Atlas — "sales" collection)
 
-yaml
-Copy code
+
 
 The backend acts as a middleware layer that processes search parameters, filters, sorting, and pagination logic before returning results to the UI.
 
@@ -42,9 +41,6 @@ backend/
 ├─ .env
 └─ README.md
 
-shell
-Copy code
-
 ### Backend Data Flow
 Controller → Service → Query Builder (utils) → MongoDB
 ↓
@@ -52,14 +48,10 @@ Sorting + Pagination
 ↓
 Response fields mapped to camelCase
 
-shell
-Copy code
 
 ### API
 GET /api/sales
 
-yaml
-Copy code
 
 Supported features:
 - Search (Customer Name, Phone Number)
@@ -98,8 +90,7 @@ frontend/
 ├─ package.json
 └─ README.md
 
-shell
-Copy code
+
 
 ### Frontend Data Flow
 UI Interaction (search / filters / sort / page)
@@ -114,8 +105,7 @@ Response mapped to UI
 ↓
 Rendered in dashboard components
 
-markdown
-Copy code
+
 
 ---
 
@@ -142,8 +132,6 @@ Name: Truestate
 Collection: sales
 Records: ~769,000
 
-yaml
-Copy code
 
 The backend uses `strict: false` schema to avoid mismatch issues and support CSV field names.
 
